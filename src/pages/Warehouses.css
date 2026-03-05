@@ -1,0 +1,243 @@
+.warehouses-page {
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Page Header */
+.page-header {
+  position: relative;
+  padding: 10rem 0 5rem;
+  text-align: center;
+  overflow: hidden;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.page-header__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(245, 158, 11, 0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.page-header__container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-header__pill {
+  display: inline-block;
+  background: rgba(245, 158, 11, 0.1);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.page-header__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -1px;
+  margin: 0 0 1rem;
+}
+
+.page-header__subtitle {
+  color: rgba(15, 23, 42, 0.5);
+  font-size: 1rem;
+}
+
+/* Filters Bar */
+.filters-bar {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 1.25rem 0;
+  position: sticky;
+  top: 66px;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+}
+
+.filters-bar__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filters-bar__search {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 50px;
+  padding: 0.6rem 1.2rem;
+  flex: 1;
+  min-width: 200px;
+  max-width: 380px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filters-bar__search:focus-within {
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.08);
+}
+
+.filters-bar__search svg {
+  color: rgba(15, 23, 42, 0.35);
+  flex-shrink: 0;
+}
+
+.filters-bar__input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #0f172a;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.filters-bar__input::placeholder {
+  color: rgba(15, 23, 42, 0.35);
+}
+
+.filters-bar__controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.filters-bar__tabs {
+  display: flex;
+  gap: 0.4rem;
+  background: #f1f5f9;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 50px;
+  padding: 0.3rem;
+}
+
+.filters-bar__tab {
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  border: none;
+  background: none;
+  color: rgba(15, 23, 42, 0.5);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filters-bar__tab--active {
+  background: #f59e0b;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.filters-bar__sort {
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 50px;
+  padding: 0.5rem 1.2rem;
+  color: rgba(15, 23, 42, 0.65);
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.filters-bar__sort:focus {
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.filters-bar__sort option {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* Grid Section */
+.warehouses-grid-section {
+  padding: 3rem 0 6rem;
+}
+
+.warehouses-grid-section__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.warehouses-count {
+  color: rgba(15, 23, 42, 0.45);
+  font-size: 0.88rem;
+  margin-bottom: 1.75rem;
+}
+
+.warehouses-count strong {
+  color: #d97706;
+}
+
+.warehouses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.warehouses-empty {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: rgba(15, 23, 42, 0.4);
+}
+
+.warehouses-empty__icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.warehouses-empty h3 {
+  color: #0f172a;
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+}
+
+.warehouses-empty p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .warehouses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .filters-bar__search {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .filters-bar__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filters-bar__controls {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .warehouses-grid {
+    grid-template-columns: 1fr;
+  }
+}
